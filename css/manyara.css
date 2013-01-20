@@ -1,0 +1,109 @@
+html, body, .preview {
+    font-family: 'Roboto Condensed', sans-serif;
+    
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.top {
+    vertical-align: middle;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0px 0px 6px #ccc;
+    padding:0px;
+    
+    height: 36px;
+    position:fixed;
+    width:100%;
+    z-index: 100;
+}
+
+.content{
+    padding-top: 36px;
+    height:100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+    z-index: 0;
+}
+.full-fill {
+    height: 100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+.content-padding {
+    padding: 24px;
+    padding-bottom: 62px;
+}
+
+
+/* Header */
+.member {
+    display: inline-block;
+    margin-top:4px;
+    margin-left: 8px;
+    padding:4px;
+}
+.logo {
+    display: inline-block;
+    font-size:120%;
+    padding:4px;
+}
+.logo a {
+    text-decoration: none;
+    font-weight:bold;
+    color: #333;
+    transition: 0.15s;
+    -moz-transition: 0.15s; /* Firefox 4 */
+    -webkit-transition: 0.15s; /* Safari and Chrome */
+    -o-transition: 0.15s; /* Opera */
+}
+.logo a:hover {
+    color: #0ae;
+    text-decoration: underline;
+}
+
+
+.nav {
+    display: block;
+    width:auto;
+    float:right;
+    padding:6px;
+}
+.nav a{
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #333;
+    border-right: 1px solid #ddd;
+    transition: 0.15s;
+    -moz-transition: 0.15s; /* Firefox 4 */
+    -webkit-transition: 0.15s; /* Safari and Chrome */
+    -o-transition: 0.15s; /* Opera */}
+
+.nav a.micro{
+    font-size: 70%;
+    color: #999;
+}
+
+.nav a:hover {
+    color: #0ae;
+    text-decoration: underline;
+    margin-bottom: 8px;
+
+}
+
+.nav a.powered-by {
+    transition: 6s;
+    -moz-transition: 6s; /* Firefox 4 */
+    -webkit-transition: 6s; /* Safari and Chrome */
+    -o-transition: 6s; /* Opera */
+}
+.nav a.powered-by:hover {
+    color: #F66;
+}
+

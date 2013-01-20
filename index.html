@@ -1,57 +1,36 @@
-<html> 
+<!doctype html>
+<html lang="en" ng-app="manyara">
 <head>
-	<title>Manyara.org | Build textbooks better, together.</title>
-	<style>
-		.top a {
-			display: block;
-			margin-bottom:0px;
-		}
-		html, body, .preview {
-			font-size: 20px;
-			font-family:Helvetica, arial, freesans, clean, sans-serif;;
-		}
-	</style> 
+  <meta charset="utf-8">
+  <title>Manyara | Build textbooks better, together.</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/manyara.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.js"></script>
+  <script src="js/manyara.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="lib/epiceditor/js/epiceditor.min.js"></script>
 </head>
 <body>
+
 	<div class="top">
-		<H2>Manyara</H2>
-		<h4>Build textbooks better, together.</h4>
-		<a href="http://daringfireball.net/projects/markdown/syntax">http://daringfireball.net/projects/markdown/syntax</a> 
-		<p>Why not create a Manyara book for this? \( p(B_1|V) = \frac{p(B_1) p(V|B_1)}{p(V)} \)</p>
+        <span class="member" value="Marcos Ojeda">
+            
+        </span>
+		<span class="logo">
+            <a href="#/home">Manyara</a>
+        </span>
+        <span >
+            
+        </span>
+        <div class="nav">
+            <a href="#/books">Books</a>
+            <a href="#/members">Community</a>
+            <a class="powered-by micro" target="powered_by" href="http://vretta.com">Powered by Vretta</a>
+            <a href="#/help" class="micro">Help</a>
+        </div>
 	</div>
-
-    <textarea id="text-input" oninput="this.editor.update()"
-rows="6" cols="60">
-For example, we can use it to solve the Cookie Problem. I’ll write B1 for the hypothesis that the cookie came from Bowl 1 and V for the vanilla cookie. Plugging in Bayes’s Theorem we get
-\\[ p(B_1|V) = \frac{p(B_1) p(V|B_1)}{p(V)} \\]
- 
-The term on the left is what we want: the probability of Bowl 1, given that we chose a vanilla cookie. The terms on the right are:
-
-- `$$ p(B_1) $$` : This is the probability that we chose Bowl 1, unconditioned by what kind of cookie we got. Since the problem says we chose a bowl at random, we can assume \(p(B_1) = \frac{1}{2}\).
-- p(V|B1): This is the probability of getting a vanilla cookie from Bowl 1, which is 3/4.
-- p(V): This is the probability of drawing a vanilla cookie from either bowl. If we combine the two bowls, we get 50 vanilla and 30 chocolate cookies, so p(V) = 5/8.
-</textarea>
-<div id="preview"> </div>
-
-<script src="lib/markdown-js/lib/markdown.js"></script>
-<script type="text/javascript"  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-    <script>
-      function Editor(input, preview)
-      {
-        this.update = function () {
-          preview.innerHTML = markdown.toHTML(input.value);
-        }
-        input.editor = this;
-        this.update();
-      }
-      var $ = function (id) { return document.getElementById(id); };
-      new Editor($("text-input"), $("preview"));
-	  
-	  MathJax.Hub.Queue(["Typeset",MathJax.Hub,"preview"]);
-
-	   // Why not build in the MathJax parser into the markdown parser so that there is no delay before the math is displayed? Is that possible or does it need to exist in the DOM?
-    </script>
+    <div class="content" ng-view></div>
 
 </body>
 </html>
