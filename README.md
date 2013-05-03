@@ -13,4 +13,4 @@ The academic community has no shortage of journals for publishing new research a
 
 What kind of textbook can a group of indie teachers put together by simply taking a base and tweaking it to their own liking? I hope that it proves useful to some and works as a good platform for teachers and learners alike.
 
-Charles <sup>Anifowose</sup>
+Charles Anifowose
